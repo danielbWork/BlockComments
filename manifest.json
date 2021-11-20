@@ -1,0 +1,20 @@
+{
+
+  "manifest_version": 2,
+  "name": "BlockComments",
+  "version": "1.0",
+
+  "description": "Removes youtube comments cause they suck",
+
+  "icons": {
+    "48": "icons/noYoutubeComments.jpg"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/watch*"],
+      "js": ["blockcomments.js"]
+    }
+  ]
+
+}
