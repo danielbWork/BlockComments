@@ -2,18 +2,34 @@
 
   "manifest_version": 2,
   "name": "BlockComments",
-  "version": "1.0",
-
+  "version": "1.1",
+  "homepage_url" : "https://github.com/danielbWork/BlockComments",
   "description": "Removes youtube comments cause they suck",
 
   "icons": {
     "48": "icons/noYoutubeComments.jpg"
   },
 
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/noYoutubeComments.jpg",
+    "default_title": "Block Comments",
+    "default_popup": "popup/popup.html",
+    "default_area": "navbar"
+  },
+
+  "background": {
+    "scripts": ["background/background.js"]
+  },
+
   "content_scripts": [
     {
       "matches": ["*://*.youtube.com/watch*"],
-      "js": ["blockcomments.js"]
+      "js": ["content/blockComments.js"]
     }
   ]
 
