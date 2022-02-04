@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "BlockComments",
-  "version": "1.1",
+  "version": "1.2",
   "homepage_url" : "https://github.com/danielbWork/BlockComments",
   "description": "Removes youtube comments cause they suck",
 
@@ -11,6 +11,8 @@
   },
 
   "permissions": [
+    "*://*.youtube.com/watch*",
+    "webNavigation",
     "activeTab",
     "tabs"
   ],

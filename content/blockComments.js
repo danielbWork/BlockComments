@@ -9,7 +9,7 @@ function updateCommentState() {
     // Youtube comments are annoying and some times removing once doesn't 
     // work this makes that they will be removed
     if (timesRun === 60) {
-      console.log("Finished updateing Commants");
+      console.log("Finished updating comments");
       clearInterval(interval);
     }
     var elem = document.getElementById("comments");
