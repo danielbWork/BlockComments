@@ -53,6 +53,13 @@ browser.runtime.onMessage.addListener((message) => {
   updateCommentState(message);
 });
 
-setTimeout(() => {
-  updateCommentState("hide");
-}, 200);
+// Waits for comments object to be loaded for the first time to remove it
+// Important to note that runs infinitely on streams
+const interval = setInterval(() => {
+  const comments = document.getElementById("comments");
+
+  if (comments) {
+    updateCommentState("hide");
+    clearInterval(interval);
+  }
+}, 100);
