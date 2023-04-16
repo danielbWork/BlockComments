@@ -11,7 +11,7 @@
   },
 
   "permissions": [
-    "*://*.youtube.com/watch*",
+    "*://*.youtube.com/*",
     "webNavigation",
     "activeTab",
     "tabs"
@@ -31,7 +31,7 @@
   "content_scripts": [
     {
       "all_frames": true,
-      "matches": ["*://*.youtube.com/watch*"],
+      "matches": ["*://*.youtube.com/*"],
       "js": ["src/content/blockComments.js"]
     }
   ]
